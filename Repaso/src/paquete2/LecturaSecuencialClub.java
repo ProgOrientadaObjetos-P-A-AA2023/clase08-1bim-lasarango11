@@ -77,7 +77,7 @@ public class LecturaSecuencialClub {
             while (true) {
                 try {
                     Club registro = (Club) entrada.readObject();
-                    if (registro.obtenerSiglas().equals(cadena)) {// cadena = siglas ingresadas
+                    if (registro.obtenerSiglas().equals(cadena)) {
                         registroBuscado = registro;
                     }
                 } catch (EOFException endOfFileException) {
@@ -110,7 +110,7 @@ public class LecturaSecuencialClub {
     }
 
     @Override
-    public String toString() {//Reporte se cambiara solo en el toString
+    public String toString() {
         String cadena = "Lista de Clubs\n";
         for (int i = 0; i < obtenerClubs().size(); i++) {
             Club p = obtenerClubs().get(i);
